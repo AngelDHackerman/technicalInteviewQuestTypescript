@@ -12,7 +12,7 @@
 
 ### 1. Implement a Queue or Stack using TypeScript
 
-__Challenge:__ Implement a basic Queue or Stack data structure using TypeScript.
+__Challenge:__ Implement a basic Queue and a Stack data structure using TypeScript.
 
 __Real-world Use:__ Queues are often used in scenarios like task scheduling, and Stacks are used for things like backtracking algorithms.
 
