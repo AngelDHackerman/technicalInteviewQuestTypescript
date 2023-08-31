@@ -1,3 +1,5 @@
+// A queue es like: FIFO (First in, First out) like a queue of persons
+
 class Queue<T>{
   private items: T[];
 
