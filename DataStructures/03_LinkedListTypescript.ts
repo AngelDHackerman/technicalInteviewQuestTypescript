@@ -27,8 +27,53 @@ namespace MyLinkedList {
       while (current.next !== null) { 
         current = current.next;
       }
-      current.next = newNode
+      current.next = newNode;
+    }
+
+    // Insertar al inicio 
+    prepend(value: T): void { 
+      const newNode = new Node(value);
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+
+    // Eliminar un nodo por valor
+    delete(value: T): void { 
+      if (this.head === null) return;
+
+      if (this.head.value === value) {
+        this.head = this.head.next;
+        return;
+      }
+
+      let current = this.head;
+      while (current.next !== null) { 
+        if (current.next.value === value) { 
+          current.next = current.next.next;
+          return;
+        }
+        current = current.next
+      }
+    }
+
+    // Recorrer la lista
+    traverse(): void {
+      let current = this.head;
+      while (current !== null) { 
+        console.log(current.value);
+        current = current.next;
+      }
     }
   }
-
 }
+
+// Uso de la lista enlazada
+const linkedList = new MyLinkedList.LinkedList<number>();
+linkedList.append(1);
+linkedList.append(2);
+linkedList.append(3);
+
+linkedList.prepend(0);
+linkedList.traverse(); // Output: 0 1 2 3
+linkedList.delete(2);
+linkedList.traverse(); // Output: 0 1 3
