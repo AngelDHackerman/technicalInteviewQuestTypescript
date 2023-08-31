@@ -2,10 +2,10 @@
 
 ## Table of Contents
 
-1. Data Structures
-2. Algorithms
-3. Design and Architecture
-4. TypeScript Specifics
+1. [Data Structures](#data-structures)
+2. [Algorithms](#algorithms)
+3. [Design and Architecture](#design-and-architecture)
+4. [TypeScript Specifics](#typescript-specifics)
 
 
 ## Data Structures
