@@ -24,4 +24,22 @@ class Queue<T>{
   isEmpty(): boolean { 
     return this.items.length === 0;
   }
+
+  // Obtener el tamaño de la cola
+  size(): number { 
+    return this.items.length;
+  }
 }
+
+
+// Usando la cola
+const queue = new Queue<number>();
+queue.enqueue(1)
+queue.enqueue(2)
+queue.enqueue(3)
+console.log(queue)
+
+console.log(queue.dequeue())  // 1 (deleted)
+console.log(queue.front())  // 2
+console.log(queue.isEmpty())  // false
+console.log(queue.size())  // 2
