@@ -37,4 +37,26 @@ class Graph<T> {
     dfs(start);
     return result;
   }
+
+  // Metodo para busqueda en anchura (BFS)
+  breadthFirstSearch(start: T): T[] {
+    const queue: T[] = [start];
+    const result: T[] = [];
+    const visited: Set<T> = new Set();
+    visited.add(start);
+
+    while (queue.length) { 
+      const vertex = queue.shift()!;
+      result.push(vertex);
+
+      this.adjacencyList.get(vertex)?.forEach(neighbor => {
+        if (!visited.has(neighbor)) { 
+          visited.add(neighbor);
+          queue.push(neighbor);
+        }
+      });
+    }
+
+    return result;
+  }
 }
