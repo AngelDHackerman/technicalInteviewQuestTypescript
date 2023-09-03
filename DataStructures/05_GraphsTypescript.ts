@@ -16,4 +16,25 @@ class Graph<T> {
     this.adjacencyList.get(vertex1)?.push(vertex2)
     this.adjacencyList.get(vertex2)?.push(vertex1)
   }
+
+  // Metodo para busqueda en profundidad (DFS)
+  depthFirstSearch(start: T): T[] {
+    const result: T[] = [];
+    const visited: Set<T> = new Set();
+    const adjacencyList = this.adjacencyList;
+
+    function dfs(vertex: T): void {
+      if (!vertex) return;
+      visited.add(vertex);
+      result.push(vertex);
+      adjacencyList.get(vertex)?.forEach(neighbor => { 
+        if (!visited.has(neighbor)) {
+          dfs(neighbor);
+        }
+      });
+    }
+
+    dfs(start);
+    return result;
+  }
 }
