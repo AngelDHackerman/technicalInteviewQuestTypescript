@@ -30,3 +30,15 @@ class HastTable<T> {
     console.log(this.table)
   }
 }
+
+// Uso de la tabla 
+const hashTable = new HastTable<number>();
+hashTable.insert('one', 1);
+hashTable.insert('two', 2);
+hashTable.insert('tree', 3);
+
+hashTable.display(); // {one: 1, two: 2, three: 3}
+console.log(hashTable.search('two')); // 2
+hashTable.delete('two');
+hashTable.display(); // {one: 1, tree: 3}
+console.log(hashTable.search('two'))  // null
