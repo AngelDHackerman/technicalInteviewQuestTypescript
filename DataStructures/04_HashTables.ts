@@ -4,7 +4,7 @@ class HastTable<T> {
 
   // Metodo para calcular el hash de una clave 
   private hash(key: string): string {
-    return key.toString();
+    return key.toString();  // En una tabla hash real, este método se encargaría de convertir la clave en una cadena hash que se utilizaría para buscar o almacenar valores en la tabla hash.
   }
 
   // Metodo para insertar un elemento
@@ -22,7 +22,7 @@ class HastTable<T> {
   // Metodo para buscar un elemento
   search(key: string): T | null {
     const hashedKey = this.hash(key);
-    return this.table[hashedKey] ?? null;
+    return this.table[hashedKey] ?? null;  // `??` es el operador de coalescencia nula.
   }
 
   // Metodo para mostrar la tabla hash
@@ -42,3 +42,4 @@ console.log(hashTable.search('two')); // 2
 hashTable.delete('two');
 hashTable.display(); // {one: 1, tree: 3}
 console.log(hashTable.search('two'))  // null
+
