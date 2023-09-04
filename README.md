@@ -4,8 +4,7 @@
 
 1. [Data Structures](#data-structures)
 2. [Algorithms](#algorithms)
-3. [Design and Architecture](#design-and-architecture)
-4. [TypeScript Specifics](#typescript-specifics)
+3. [TypeScript Specifics](#typescript-specifics)
 
 
 ## Data Structures
@@ -65,26 +64,6 @@ __Real-world Use:__ Dynamic programming is used in optimization problems, like r
 __Challenge:__ Implement an algorithm that uses the divide-and-conquer strategy, like finding the maximum/minimum element in an array.
 
 __Real-world Use:__ Divide and conquer is used in sorting algorithms like QuickSort and in numerical simulations.
-
-## Design and Architecture
-
-### 1. Implement Singleton Pattern using TypeScript
-
-__Challenge:__ Implement the Singleton design pattern.
-
-__Real-world Use:__ Singleton is used for logging, driver objects, caching, thread pools, and database connections.
-
-### 2. Implement Factory Pattern using TypeScript
-
-__Challenge:__ Implement the Factory design pattern to create objects of different classes.
-
-__Real-world Use:__ Factory pattern is used in UI libraries and in managing and maintaining collections of objects that are different but have many common characteristics.
-
-### 3. Design a Simple RESTful API using TypeScript
-
-__Challenge:__ Design a simple RESTful API and explain your design decisions.
-
-__Real-world Use:__ RESTful APIs are the backbone of many modern web services and applications.
 
 ## TypeScript Specifics
 
