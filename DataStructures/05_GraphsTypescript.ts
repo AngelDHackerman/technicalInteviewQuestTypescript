@@ -60,3 +60,17 @@ class Graph<T> {
     return result;
   }
 }
+
+// Uso del grafo 
+const graph = new Graph<number>();
+graph.addVertex(1);
+graph.addVertex(2);
+graph.addVertex(3);
+graph.addVertex(4);
+graph.addEdge(1, 2);
+graph.addEdge(2, 3);
+graph.addEdge(1, 4);
+
+console.log(graph.depthFirstSearch(1)); // [1, 2, 3, 4]
+console.log(graph.breadthFirstSearch(1)); // [1, 2, 4, 3]
+
